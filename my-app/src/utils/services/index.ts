@@ -10,6 +10,6 @@ export const signInRequest = (signInData: ISignInData) => {
   return postRequest({ url: SIGN_IN_API_URL, data: signInData });
 };
 
-export const getDomainRequest = () => {
-  return getRequest({ url: GET_DOMAIN_API_URL });
+export const getDomainRequest = (token: string) => {
+  return getRequest({ url: GET_DOMAIN_API_URL, data: { token } });
 };

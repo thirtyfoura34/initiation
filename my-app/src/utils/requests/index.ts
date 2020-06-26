@@ -10,5 +10,7 @@ export const postRequest = (requestData: IRequestData) => {
 };
 
 export const getRequest = (requestData: IRequestData) => {
-  return axios.get(requestData.url);
+  return axios.get(requestData.url, {
+    headers: { Token: requestData.data?.token },
+  });
 };
