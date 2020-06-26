@@ -63,8 +63,6 @@ export const LoginForm: React.FC<IProps> = (props) => {
               variant: "error",
               autoHideDuration: 2500,
             });
-          })
-          .finally(() => {
             setSubmitting(false);
           });
       }}

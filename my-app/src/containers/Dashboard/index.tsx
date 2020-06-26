@@ -12,17 +12,19 @@ const DashboardContainer = styled.div`
 `;
 
 const DomainPanel = styled(Card)`
-  padding: 20px 40px;
+  padding: 40px 60px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
 `;
 
 const DomainPanelTitle = styled(CardTitle)`
-  font-size: 20px;
+  font-size: 35px;
   font-weight: bold;
   text-align: center;
+  border-bottom: 1px solid #efefef;
 `;
 
 const DomainItem = styled(CardText)`
+font-size: 30px
   margin-bottom: 5px;
 `;
 
