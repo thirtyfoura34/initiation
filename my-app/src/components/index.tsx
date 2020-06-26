@@ -1,1 +1,2 @@
-export { StandardButton } from "./common/StandardButton";
+export { Header } from "./Header";
+export { InputField } from "./common/InputField";

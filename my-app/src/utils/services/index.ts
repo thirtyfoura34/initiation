@@ -1,14 +1,15 @@
-import axios from "axios";
+import { getRequest, postRequest } from "utils/requests";
+import { SIGN_IN_API_URL, GET_DOMAIN_API_URL } from "utils/constants";
 
-interface IRequestData {
-  url: string;
-  data?: any;
+interface ISignInData {
+  username: string;
+  password: string;
 }
 
-export const postRequest = (requestData: IRequestData) => {
-  return axios.post(requestData.url, requestData.data);
+export const signInRequest = (signInData: ISignInData) => {
+  return postRequest({ url: SIGN_IN_API_URL, data: signInData });
 };
 
-export const getRequest = (requestData: IRequestData) => {
-  return axios.get(requestData.url);
+export const getDomainRequest = () => {
+  return getRequest({ url: GET_DOMAIN_API_URL });
 };
