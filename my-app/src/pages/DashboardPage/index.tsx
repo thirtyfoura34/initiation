@@ -1,10 +1,11 @@
 import React from "react";
-import { Header } from "components";
+import { Header, Dashboard } from "containers";
 
-export const DashboardPage: React.FC = () => {
+export const DashboardPage: React.FC<any> = (props) => {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <Dashboard />
+    </>
   );
 };

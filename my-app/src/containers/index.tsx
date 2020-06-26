@@ -1,1 +1,3 @@
-export { LoginForm } from "./forms/LoginForm";
+export { LoginForm } from "./LoginForm";
+export { Dashboard } from "./Dashboard";
+export { Header } from "./Header";

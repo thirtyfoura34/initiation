@@ -1,13 +1,20 @@
 import React from "react";
 import { FormGroup, Label, Input } from "reactstrap";
+import { ErrorMessage, FieldProps } from "formik";
+import styled from "styled-components";
 
-interface IProps {
+const ErrorContainer = styled.div`
+  font-size: 12px;
+  color: #d94c5f;
+`;
+
+type IProps = {
   type?: "text" | "password";
   label?: string;
   name?: string;
   id?: string;
   placeholder?: string;
-}
+} & FieldProps;
 
 export const InputField: React.FC<IProps> = (props) => {
   return (
@@ -15,10 +22,13 @@ export const InputField: React.FC<IProps> = (props) => {
       <Label for={props.id}>{props.label}</Label>
       <Input
         type={props.type}
-        name={props.name}
         id={props.id}
         placeholder={props.placeholder}
+        {...props.field}
       />
+      <ErrorContainer>
+        <ErrorMessage name={props.field?.name || ""} />
+      </ErrorContainer>
     </FormGroup>
   );
 };

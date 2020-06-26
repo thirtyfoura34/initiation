@@ -9,10 +9,18 @@ const LoginPageContainer = styled.div`
   min-height: 100%;
 `;
 
-export const LoginPage: React.FC = () => {
+interface IProps {
+  authToken: string;
+  setAuthToken: Function;
+}
+
+export const LoginPage: React.FC<IProps> = (props) => {
   return (
     <LoginPageContainer>
-      <LoginForm />
+      <LoginForm
+        setAuthToken={props.setAuthToken}
+        authToken={props.authToken}
+      />
     </LoginPageContainer>
   );
 };
